@@ -2,6 +2,7 @@
 Name=xrick
 Comment=New version of Rick Dangerous
 Comment[pl]=Nowa wersja Rick Dangerous
+Icon=xrick.png
 Exec=xrick
 Terminal=0
 Type=Application

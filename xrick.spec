@@ -2,7 +2,7 @@ Summary:	Linux version of Rick Dangerous
 Summary(pl):	Wersja Linux starej gry	Rick Dangerous
 Name:		xrick
 Version:	010808
-Release:	1
+Release:	2
 License:	Unknown
 Group:		X11/Applications/Games
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz

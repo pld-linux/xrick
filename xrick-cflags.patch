@@ -1,16 +1,16 @@
-diff -durN xrick-010710.orig/config xrick-010710/config
---- xrick-010710.orig/config	Tue Jul 10 16:46:57 2001
-+++ xrick-010710/config	Sat Jul 21 13:33:00 2001
-@@ -20,10 +20,10 @@
+diff -durN xrick.orig/config xrick/config
+--- xrick.orig/config	Mon Aug  6 21:06:13 2001
++++ xrick/config	Tue Sep 18 12:21:10 2001
+@@ -38,10 +38,10 @@
  
  ROOTDIR=`pwd`
  
--CFLAGS_MISC='-ansi -pedantic -Wall -W -O2'
-+CFLAGS_MISC='-ansi -pedantic -Wall -W $(OPTFLAGS)'
- CFLAGS_SDL=`sdl-config --cflags`
- CFLAGS_GFX="-DGFX$GFX"
--CFLAGS_DEBUG="-g" #"-DDEBUG -g"
-+CFLAGS_DEBUG="" #"-DDEBUG -g"
+-CFLAGS=
++CFLAGS="$CFLAGS"
+ LDFLAGS=
  
- LDFLAGS_SDL=`sdl-config --libs`
+-CFLAGS="$CFLAGS -g -ansi -pedantic -Wall -W -O2" # add -g to debug
++CFLAGS="$CFLAGS -ansi -pedantic -Wall -W" # add -g to debug
+ CFLAGS="$CFLAGS -I $ROOTDIR/include"
+ CFLAGS="$CFLAGS -DVERSION=\\\"$VERSION\\\""
  

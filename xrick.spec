@@ -9,8 +9,9 @@ Group(de):	X11/Applikationen/Spiele
 Group(pl):	X11/Aplikacje/Gry
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
-Source2:	%{name}.xpm
+Source2:	%{name}.png
 Patch0:		%{name}-cflags.patch
+Icon:		xrick.xpm
 URL:		http://www.bigorno.net/%{name}/
 BuildRequires:	SDL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,8 +50,8 @@ przeniesiony na Linux, Windows BeOS, Amiga, ...
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d  $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_applnkdir}/Games}
+
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}

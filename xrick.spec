@@ -3,7 +3,7 @@ Summary(pl):	Linuksowa wersja starej gry Rick Dangerous
 Name:		xrick
 Version:	021212
 Release:	2
-License:	Unknown
+License:	unknown
 Group:		X11/Applications/Games
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
 # Source0-md5:	615190051481266710cb43ecd1fe930c

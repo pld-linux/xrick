@@ -10,10 +10,9 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-cflags.patch
 Icon:		xrick.xpm
-URL:		http://www.bigorno.net/%{name}/
+URL:		http://www.bigorno.net/xrick/
 BuildRequires:	SDL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Way before Lara Croft, back in the 1980's and early 1990's, Rick
@@ -33,11 +32,11 @@ Po³udniowej Ameryki do futurystycznej bazy rakietowej, przez Egipt i
 zamek Schwarzendumpf. Gra by³a wydana dla Atari ST, IBM PC i wiele
 innych platform.
 
-xrick to w³a¶ciwie napisany od nowa Rick Dangerous który zosta³
-przeniesiony na Linux, Windows BeOS, Amiga, ...
+xrick to w³a¶ciwie napisany od nowa Rick Dangerous, który zosta³
+przeniesiony na Linuksa, Windows, BeOS, Amigê...
 
 %prep
-%setup -qn xrick
+%setup -qn %{name}
 %patch0 -p1
 
 %build
@@ -51,7 +50,6 @@ install -d  $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_applnkdir}/Games}
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT

@@ -1,0 +1,16 @@
+diff -durN xrick-010710.orig/config xrick-010710/config
+--- xrick-010710.orig/config	Tue Jul 10 16:46:57 2001
++++ xrick-010710/config	Sat Jul 21 13:33:00 2001
+@@ -20,10 +20,10 @@
+ 
+ ROOTDIR=`pwd`
+ 
+-CFLAGS_MISC='-ansi -pedantic -Wall -W -O2'
++CFLAGS_MISC='-ansi -pedantic -Wall -W $(OPTFLAGS)'
+ CFLAGS_SDL=`sdl-config --cflags`
+ CFLAGS_GFX="-DGFX$GFX"
+-CFLAGS_DEBUG="-g" #"-DDEBUG -g"
++CFLAGS_DEBUG="" #"-DDEBUG -g"
+ 
+ LDFLAGS_SDL=`sdl-config --libs`
+ 

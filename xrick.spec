@@ -1,7 +1,7 @@
 Summary:	Linux version of Rick Dangerous
 Summary(pl):	Wersja Linux starej gry	Rick Dangerous
 Name:		xrick
-Version:	010710
+Version:	010808
 Release:	1
 License:	Unknown
 Group:		X11/Applications/Games
@@ -41,7 +41,7 @@ xrick to w³a¶ciwie napisany od nowa Rick Dangerous który zosta³
 przeniesiony na Linux, Windows BeOS, Amiga, ...
 
 %prep
-%setup -q
+%setup -qn xrick
 %patch0 -p1
 
 %build

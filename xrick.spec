@@ -5,8 +5,6 @@ Version:	010808
 Release:	1
 License:	Unknown
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.png

@@ -1,5 +1,5 @@
 Summary:	Linux version of Rick Dangerous
-Summary(pl):	Wersja Linux starej gry	Rick Dangerous
+Summary(pl):	Linuksowa wersja starej gry Rick Dangerous
 Name:		xrick
 Version:	021212
 Release:	2
@@ -27,7 +27,7 @@ Linux, Windows, BeOs, Amiga, ...
 
 %description -l pl
 D³ugo zanim pojawi³a siê Lara Croft, w latach 80-tych i w pocz±tku
-90-tych, Rick Dangerous by³ Indiana Jones'em gier komputerowych,
+90-tych, Rick Dangerous by³ Indiana Jonesem gier komputerowych,
 uciekaj±c przed tocz±cymi siê kamieniami, unikaj±c pu³apek, od
 Po³udniowej Ameryki do futurystycznej bazy rakietowej, przez Egipt i
 zamek Schwarzendumpf. Gra by³a wydana dla Atari ST, IBM PC i wiele
@@ -41,7 +41,9 @@ przeniesiony na Linuksa, Windows, BeOS, Amigê...
 %patch0 -p1
 
 %build
-CFLAGS="%{rpmcflags}" DATADIR="%{_datadir}/%{name}/" %{__make}
+CFLAGS="%{rpmcflags}" \
+DATADIR="%{_datadir}/%{name}/" \
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -64,4 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*
 %{_desktopdir}/*.desktop
 %{_datadir}/%{name}
-%{_mandir}/man6
+%{_mandir}/man6/xrick.6*

@@ -1,15 +1,14 @@
 Summary:	Linux version of Rick Dangerous
 Summary(pl):	Wersja Linux starej gry	Rick Dangerous
 Name:		xrick
-Version:	010808
-Release:	2
+Version:	021212
+Release:	1
 License:	Unknown
 Group:		X11/Applications/Games
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
-# Source0-md5:	0a25621afe66b5ef5733cea75f410d40
+# Source0-md5:	615190051481266710cb43ecd1fe930c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Patch0:		%{name}-cflags.patch
 Icon:		xrick.xpm
 URL:		http://www.bigorno.net/xrick/
 BuildRequires:	SDL-devel
@@ -37,12 +36,11 @@ xrick to w³a¶ciwie napisany od nowa Rick Dangerous, który zosta³
 przeniesiony na Linuksa, Windows, BeOS, Amigê...
 
 %prep
-%setup -qn %{name}
-%patch0 -p1
+%setup -q
 
 %build
-./config
-%{__make} OPTFLAGS="%{rpmcflags}"
+sed -i -e 's#-O2#%{rpmcflags}#g' Makefile
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

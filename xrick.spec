@@ -6,6 +6,7 @@ Release:	2
 License:	Unknown
 Group:		X11/Applications/Games
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
+# Source0-md5:	0a25621afe66b5ef5733cea75f410d40
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-cflags.patch

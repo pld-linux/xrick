@@ -2,17 +2,17 @@ Summary:	Linux version of Rick Dangerous
 Summary(pl):	Wersja Linux starej gry	Rick Dangerous
 Name:		xrick
 Version:	021212
-Release:	1
+Release:	2
 License:	Unknown
 Group:		X11/Applications/Games
 Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
 # Source0-md5:	615190051481266710cb43ecd1fe930c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-cflags.patch
 Icon:		xrick.xpm
 URL:		http://www.bigorno.net/xrick/
 BuildRequires:	SDL-devel
-BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,18 +38,21 @@ przeniesiony na Linuksa, Windows, BeOS, Amigê...
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-sed -i -e 's#-O2#%{rpmcflags}#g' Makefile
-%{__make}
+CFLAGS="%{rpmcflags}" DATADIR="%{_datadir}/%{name}/" %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_desktopdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_desktopdir},%{_datadir}/%{name},%{_mandir}/man6}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install data.zip $RPM_BUILD_ROOT%{_datadir}/%{name}
+gunzip xrick.6.gz
+install xrick.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,3 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_pixmapsdir}/*
 %{_desktopdir}/*.desktop
+%{_datadir}/%{name}
+%{_mandir}/man6

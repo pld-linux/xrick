@@ -7,5 +7,5 @@ Icon=xrick.png
 Exec=xrick
 Terminal=false
 Type=Application
-Categories:Game;
+Categories:Game;ArcadeGame;
 # vi: encoding=utf-8

@@ -10,7 +10,6 @@ Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-cflags.patch
-Icon:		xrick.xpm
 URL:		http://www.bigorno.net/xrick/
 BuildRequires:	SDL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

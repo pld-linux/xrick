@@ -1,5 +1,5 @@
 Summary:	Linux version of Rick Dangerous
-Summary(pl):	Linuksowa wersja starej gry Rick Dangerous
+Summary(pl.UTF-8):   Linuksowa wersja starej gry Rick Dangerous
 Name:		xrick
 Version:	021212
 Release:	3
@@ -24,16 +24,16 @@ released for the Atari ST, the IBM PC, and many more platforms.
 xrick is a complete rewrite of Rick Dangerous, and has been ported to
 Linux, Windows, BeOs, Amiga, ...
 
-%description -l pl
-D³ugo zanim pojawi³a siê Lara Croft, w latach 80-tych i w pocz±tku
-90-tych, Rick Dangerous by³ Indiana Jonesem gier komputerowych,
-uciekaj±c przed tocz±cymi siê kamieniami, unikaj±c pu³apek, od
-Po³udniowej Ameryki do futurystycznej bazy rakietowej, przez Egipt i
-zamek Schwarzendumpf. Gra by³a wydana dla Atari ST, IBM PC i wiele
+%description -l pl.UTF-8
+DÅ‚ugo zanim pojawiÅ‚a siÄ™ Lara Croft, w latach 80-tych i w poczÄ…tku
+90-tych, Rick Dangerous byÅ‚ Indiana Jonesem gier komputerowych,
+uciekajÄ…c przed toczÄ…cymi siÄ™ kamieniami, unikajÄ…c puÅ‚apek, od
+PoÅ‚udniowej Ameryki do futurystycznej bazy rakietowej, przez Egipt i
+zamek Schwarzendumpf. Gra byÅ‚a wydana dla Atari ST, IBM PC i wiele
 innych platform.
 
-xrick to w³a¶ciwie napisany od nowa Rick Dangerous, który zosta³
-przeniesiony na Linuksa, Windows, BeOS, Amigê...
+xrick to wÅ‚aÅ›ciwie napisany od nowa Rick Dangerous, ktÃ³ry zostaÅ‚
+przeniesiony na Linuksa, Windows, BeOS, AmigÄ™...
 
 %prep
 %setup -q

@@ -1,5 +1,5 @@
 Summary:	Linux version of Rick Dangerous
-Summary(pl.UTF-8):   Linuksowa wersja starej gry Rick Dangerous
+Summary(pl.UTF-8):	Linuksowa wersja starej gry Rick Dangerous
 Name:		xrick
 Version:	021212
 Release:	3

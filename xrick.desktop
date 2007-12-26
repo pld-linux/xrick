@@ -1,9 +1,8 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Xrick
 Comment=New version of Rick Dangerous
 Comment[pl]=Nowa wersja Rick Dangerous
-Icon=xrick.png
+Icon=xrick
 Exec=xrick
 Terminal=false
 Type=Application

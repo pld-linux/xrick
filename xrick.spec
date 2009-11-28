@@ -5,13 +5,14 @@ Version:	021212
 Release:	3
 License:	unknown
 Group:		X11/Applications/Games
-Source0:	http://www.bigorno.net/%{name}/%{name}-%{version}.tgz
+Source0:	http://www.bigorno.net/xrick/%{name}-%{version}.tgz
 # Source0-md5:	615190051481266710cb43ecd1fe930c
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-cflags.patch
 URL:		http://www.bigorno.net/xrick/
 BuildRequires:	SDL-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
